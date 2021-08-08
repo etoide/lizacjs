@@ -1,0 +1,311 @@
+@font-face {
+    font-family: 'QuickSand';
+    src: url('./Quicksand-VariableFont_wght.ttf');
+}
+
+body {
+    color: white;
+    font-family: QuickSand;
+    margin: 0;
+    background-color: #222222 !important;
+    user-select: none;
+}
+
+:focus,
+ :active:focus,
+.active:focus,
+.focus,
+ :active.focus,
+.active.focus {
+    outline: none !important;
+}
+
+.menupanel {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 0;
+    text-decoration: none;
+    font-size: 17px;
+    width: calc(100% / 3);
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: 0;
+    opacity: 0.01;
+}
+
+[type="checkbox"]:not(:checked)+label,
+[type="checkbox"]:checked+label {
+    position: relative;
+    padding-left: 2.3em;
+    font-size: 1.05em;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+
+/* checkbox aspect */
+
+[type="checkbox"]:not(:checked)+label:before,
+[type="checkbox"]:checked+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.4em;
+    height: 1.4em;
+    border: 1px solid #aaa;
+    background: #FFF;
+    border-radius: .2em;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1), 0 0 0 rgba(78, 93, 148, .2);
+    -webkit-transition: all .275s;
+    transition: all .275s;
+}
+
+
+/* checked mark aspect */
+
+[type="checkbox"]:not(:checked)+label:after,
+[type="checkbox"]:checked+label:after {
+    content: '✕';
+    position: absolute;
+    top: .525em;
+    left: .15em;
+    font-size: 1.375em;
+    color: #7289DA;
+    line-height: 0;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #666;
+    height: 0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #646464;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #444;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #666;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #646464;
+}
+
+::-webkit-resizer {
+    background-color: #666;
+}
+
+
+/* checked mark aspect changes */
+
+[type="checkbox"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(45deg);
+    transform: scale(0) rotate(45deg);
+}
+
+[type="checkbox"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+}
+
+
+/* Disabled checkbox */
+
+[type="checkbox"]:disabled:not(:checked)+label:before,
+[type="checkbox"]:disabled:checked+label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #e9e9e9;
+}
+
+[type="checkbox"]:disabled:checked+label:after {
+    color: #777;
+}
+
+[type="checkbox"]:disabled+label {
+    color: #aaa;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    vertical-align: middle;
+    border: 2px solid #7289DA;
+    border-radius: 50%;
+    padding: 2px;
+    margin: 0 5px;
+}
+
+input[type="radio"]:checked+label span {
+    width: 15px;
+    height: 15px;
+    background: #7289DA;
+    background-clip: content-box;
+}
+
+input[type=number] {
+    width: 60px;
+    flex-grow: 2;
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 0px;
+    border-radius: 3px;
+    background: #333;
+    color: white;
+    padding: 5px;
+}
+
+.kitNameBox input[type=text] {
+    flex-grow: 2;
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 0px;
+    border-radius: 3px;
+    background: #333;
+    color: white;
+    padding: 5px;
+}
+
+form.tagbox input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+.tagDiv {
+    padding-top: 15px;
+}
+
+form.tagbox {
+    display: flex;
+    flex-direction: row;
+}
+
+form.tagbox input,
+form.tagbox button {
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+form.tagbox input {
+    flex-grow: 2;
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+form.tagbox button {
+    background: #7289DA;
+    color: white;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.setskins {
+    float: right;
+    width: 50px;
+    height: 30px;
+    padding: 6px;
+    border-top: 25px;
+    background: #7289DA;
+    border-top: 25px;
+    color: white;
+    font-size: 16px;
+    border: 1px solid #7289DA;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.saveconfig :hover {
+    background: #7FA0E8;
+}
+
+.saveconfig {
+    transform: translateY(-50%);
+    width: 80px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 15px;
+    border-top: 25px;
+    border-bottom: 25px;
+    background: #7289DA;
+    border-top: 25px;
+    color: white;
+    font-size: 17px;
+    border: 1px solid #7289DA;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.saveconfig :hover {
+    background: #7FA0E8;
+}
+
+.setbind {
+    float: right;
+    width: auto;
+    height: 30px;
+    padding: 6px;
+    border-top: 25px;
+    background: #7289DA;
+    border-top: 25px;
+    color: white;
+    font-size: 16px;
+    border: 1px solid #7289DA;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
